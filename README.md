@@ -48,6 +48,11 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 Specify what it takes to deploy your app.
 
+# run this command to install sb-admin-2 bootstrap to node module 
+
+npm i startbootstrap-sb-admin-2
+
+
 ## Further Reading / Useful Links
 
 * [ember.js](https://emberjs.com/)
