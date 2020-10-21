@@ -18,6 +18,10 @@ You will need the following things properly installed on your computer.
 * `cd desk-vibe`
 * `npm install`
 
+#### run this command to install sb-admin-2 bootstrap to node module 
+
+npm i startbootstrap-sb-admin-2
+
 ## Running / Development
 
 * `ember serve`
@@ -47,11 +51,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 ### Deploying
 
 Specify what it takes to deploy your app.
-
-#### run this command to install sb-admin-2 bootstrap to node module 
-
-npm i startbootstrap-sb-admin-2
-
 
 ## Further Reading / Useful Links
 
