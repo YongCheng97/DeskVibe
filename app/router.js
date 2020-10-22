@@ -7,4 +7,9 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
+  this.route('memberDashboard', function() {});
+  this.route('not-found', {path: '/*path'});
+  this.route('lead-dashboardA', function() {});
+  this.route('lead-dashboardB', function() {});
+  this.route('lead-dashboardC', function() {});
 });
