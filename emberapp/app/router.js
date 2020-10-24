@@ -11,5 +11,9 @@ Router.map(function() {
   this.route('not-found', {path: '/*path'});
   this.route('lead-dashboardA', function() {});
   this.route('lead-dashboardB', function() {});
-  this.route('lead-dashboardC', function() {});
+  this.route('lead-dashboardC', function() {
+    this.route('surveys');
+    this.route('showFeedback', { path: '/*path' });
+    this.route('showSurvey', { path: '/*path' });
+  });
 });
