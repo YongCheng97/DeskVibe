@@ -13,7 +13,7 @@ Router.map(function() {
   this.route('lead-dashboardB', function() {});
   this.route('lead-dashboardC', function() {
     this.route('surveys');
-    this.route('showFeedback', { path: '/*path' });
-    this.route('showSurvey', { path: '/*path' });
+    this.route('showFeedback', { path: '/showFeedback/*' });
+    this.route('showSurvey', { path: '/showSurvey/*' });
   });
 });
