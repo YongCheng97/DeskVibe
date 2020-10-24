@@ -41,7 +41,7 @@
 
           <!-- Topbar Search -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
+            <div class="input-group text-primary">
               <h2> DeskVibe </h2>
             </div>
           </form>
@@ -90,7 +90,34 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="surveyModalTitle">Create New Project</h5>
+                  <h5 class="modal-title text-primary" id="projectModalTitle">Create New Project</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="projectName">Project Name: </label>
+                      <input type="text" class="form-control" id="projectName" placeholder="Enter a project name">
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Create</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+		  
+		  <!-- Create Task Modal -->
+          <div class="modal fade" id="createTaskModal" tabindex="-1" role="dialog"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-primary" id="taskModalTitle">Create New Task</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -179,7 +206,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                       <div class="dropdown-header">Actions:</div>
-                      <a class="dropdown-item" href="#"><i class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
+                      <a class="dropdown-item" data-toggle="modal" data-target="#createTaskModal"><i class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
                       <a class="dropdown-item" href="#"><i class="fa fa-pencil fa-sm text-black-50"></i> Rename Project</a>
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="#"><i class="fa fa-minus fa-sm text-black-50"></i> Delete Project</a>
@@ -224,7 +251,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                       <div class="dropdown-header">Actions:</div>
-                      <a class="dropdown-item" href="#"><i class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
+                      <a class="dropdown-item" data-toggle="modal" data-target="#createTaskModal"><i class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
                       <a class="dropdown-item" href="#"><i class="fa fa-pencil fa-sm text-black-50"></i> Rename Project</a>
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="#"><i class="fa fa-minus fa-sm text-black-50"></i> Delete Project</a>
@@ -269,7 +296,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                       <div class="dropdown-header">Actions:</div>
-                      <a class="dropdown-item" href="#"><i class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
+                      <a class="dropdown-item" data-toggle="modal" data-target="#createTaskModal"><i class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
                       <a class="dropdown-item" href="#"><i class="fa fa-pencil fa-sm text-black-50"></i> Rename Project</a>
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="#"><i class="fa fa-minus fa-sm text-black-50"></i> Delete Project</a>
@@ -317,7 +344,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                       <div class="dropdown-header">Actions:</div>
-                      <a class="dropdown-item" href="#"><i class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
+                      <a class="dropdown-item" data-toggle="modal" data-target="#createTaskModal"><i class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
                       <a class="dropdown-item" href="#"><i class="fa fa-pencil fa-sm text-black-50"></i> Rename Project</a>
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="#"><i class="fa fa-minus fa-sm text-black-50"></i> Delete Project</a>
