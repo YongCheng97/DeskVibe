@@ -69,6 +69,8 @@
     "edition": "octane"
   },
   "dependencies": {
+    "chart.js": "^2.9.4",
+    "ember-cli-chartjs": "^3.0.0",
     "startbootstrap-sb-admin-2": "^4.1.1"
   }
 }
