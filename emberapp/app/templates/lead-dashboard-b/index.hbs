@@ -75,18 +75,17 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-		
-		  <!-- Page Heading -->
+
+          <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Current Projects</h1>
             <button type="button" data-toggle="modal" data-target="#createProjectModal"
               class="d-none d-md-inline-block btn btn-md btn-primary shadow-md">
-			  <i class="fa fa-plus fa-sm text-white-50"></i> Add New Project</button>
+              <i class="fa fa-plus fa-sm text-white-50"></i> Add New Project</button>
           </div>
-		  
-		  <!-- Create Project Modal -->
-          <div class="modal fade" id="createProjectModal" tabindex="-1" role="dialog"
-            aria-hidden="true">
+
+          <!-- Create Project Modal -->
+          <div class="modal fade" id="createProjectModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -110,10 +109,9 @@
               </div>
             </div>
           </div>
-		  
-		  <!-- Create Task Modal -->
-          <div class="modal fade" id="createTaskModal" tabindex="-1" role="dialog"
-            aria-hidden="true">
+
+          <!-- Create Task Modal -->
+          <div class="modal fade" id="createTaskModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -124,67 +122,73 @@
                 </div>
                 <form>
                   <div class="modal-body">
-					  <div class="row">
-						<div class="col-sm">
-							<div class="form-group">
-							  <label for="taskName">Task Name: </label>
-							  <input type="text" class="form-control" id="taskName">
-							</div>
-						</div>
-						<div class="col-sm">
-							<div class="form-group">
-							  <label for="duration">Estimated Duration: </label>
-							  <input type="text" class="form-control" id="duration">
-							</div>
-						</div>
-					  </div>
-                      <div class="card-body">
-						  <label>Allocated Team Members: </label>
-						  <h4 class="small font-weight-bold">Alice <span class="float-right">20%</span></h4>
-						  <div class="progress mb-4">
-							<div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-						  </div>
-						  <h4 class="small font-weight-bold">Bob <span class="float-right">40%</span></h4>
-						  <div class="progress mb-4">
-							<div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-						  </div>
-						  <h4 class="small font-weight-bold">Cindy <span class="float-right">60%</span></h4>
-						  <div class="progress mb-4">
-							<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-						  </div>
-						  <br>
-						  <label>Other Team Members: </label>
-						  <h4 class="small font-weight-bold">Edward <span class="float-right">20%</span></h4>
-						  <div class="progress mb-4">
-							<div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-						  </div>
-						  <h4 class="small font-weight-bold">Felicia <span class="float-right">40%</span></h4>
-						  <div class="progress mb-4">
-							<div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-						  </div>
-						  <h4 class="small font-weight-bold">Gerald <span class="float-right">60%</span></h4>
-						  <div class="progress mb-4">
-							<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-						  </div>
-					  </div>
-					  <div class="modal-body">
-						<div class="form-group">
-							<label for="member">Selected Member for Task: </label>
-							<select class="custom-select">
-							  <option selected>	Select a member</option>
-							  <option value="Alice">Alice</option>
-							  <option value="Bob">Bob</option>
-							  <option value="Cindy">Cindy</option>
-							  <option value="Edward">Edward</option>
-							  <option value="Felicia">Felicia</option>
-							  <option value="Gerald">Gerald</option>
-							</select>
-						  </div>
-					  </div>
-                      <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Create</button>
+                    <div class="row">
+                      <div class="col-sm">
+                        <div class="form-group">
+                          <label for="taskName">Task Name: </label>
+                          <input type="text" class="form-control" id="taskName">
+                        </div>
                       </div>
+                      <div class="col-sm">
+                        <div class="form-group">
+                          <label for="duration">Estimated Duration: </label>
+                          <input type="text" class="form-control" id="duration">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <label>Allocated Team Members: </label>
+                      <h4 class="small font-weight-bold">Alice <span class="float-right">20%</span></h4>
+                      <div class="progress mb-4">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <h4 class="small font-weight-bold">Bob <span class="float-right">40%</span></h4>
+                      <div class="progress mb-4">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <h4 class="small font-weight-bold">Cindy <span class="float-right">60%</span></h4>
+                      <div class="progress mb-4">
+                        <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <br>
+                      <label>Other Team Members: </label>
+                      <h4 class="small font-weight-bold">Edward <span class="float-right">20%</span></h4>
+                      <div class="progress mb-4">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <h4 class="small font-weight-bold">Felicia <span class="float-right">40%</span></h4>
+                      <div class="progress mb-4">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <h4 class="small font-weight-bold">Gerald <span class="float-right">60%</span></h4>
+                      <div class="progress mb-4">
+                        <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-group">
+                        <label for="member">Selected Member for Task: </label>
+                        <select class="custom-select">
+                          <option selected> Select a member</option>
+                          <option value="Alice">Alice</option>
+                          <option value="Bob">Bob</option>
+                          <option value="Cindy">Cindy</option>
+                          <option value="Edward">Edward</option>
+                          <option value="Felicia">Felicia</option>
+                          <option value="Gerald">Gerald</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Create</button>
+                    </div>
                   </div>
                 </form>
               </div>
@@ -192,193 +196,212 @@
           </div>
 
           <!-- Content Row -->
-		  <div class="row">
-		  
-          <!-- Project -->
+          <div class="row">
+
+            <!-- Project -->
             <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Project 1</h6>
                   <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
                       <i class="fa fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                      aria-labelledby="dropdownMenuLink">
                       <div class="dropdown-header">Actions:</div>
-                      <a class="dropdown-item" data-toggle="modal" data-target="#createTaskModal"><i class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
-                      <a class="dropdown-item" href="#"><i class="fa fa-pencil fa-sm text-black-50"></i> Rename Project</a>
+                      <a class="dropdown-item" data-toggle="modal" data-target="#createTaskModal"><i
+                          class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil fa-sm text-black-50"></i> Rename
+                        Project</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#"><i class="fa fa-minus fa-sm text-black-50"></i> Delete Project</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-minus fa-sm text-black-50"></i> Delete
+                        Project</a>
                     </div>
                   </div>
                 </div>
                 <div class="card-body">
-                  <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Customer Database <span class="float-right">60%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Payout Details <span class="float-right">80%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
-                  <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-				  <br>
-				</div>
+                {{#each this.model.projectTasks as |task|}}
+                <Task @task={{task}} />
+                {{/each}}
+
+                  <br>
+                </div>
               </div>
             </div>
-			
-			<!-- Project -->
+
+            <!-- Project -->
             <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Project 2</h6>
                   <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
                       <i class="fa fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                      aria-labelledby="dropdownMenuLink">
                       <div class="dropdown-header">Actions:</div>
-                      <a class="dropdown-item" data-toggle="modal" data-target="#createTaskModal"><i class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
-                      <a class="dropdown-item" href="#"><i class="fa fa-pencil fa-sm text-black-50"></i> Rename Project</a>
+                      <a class="dropdown-item" data-toggle="modal" data-target="#createTaskModal"><i
+                          class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil fa-sm text-black-50"></i> Rename
+                        Project</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#"><i class="fa fa-minus fa-sm text-black-50"></i> Delete Project</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-minus fa-sm text-black-50"></i> Delete
+                        Project</a>
                     </div>
                   </div>
                 </div>
                 <div class="card-body">
                   <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20"
+                      aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40"
+                      aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   <h4 class="small font-weight-bold">Customer Database <span class="float-right">60%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="100"></div>
                   </div>
                   <h4 class="small font-weight-bold">Payout Details <span class="float-right">80%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80"
+                      aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
                   <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100"
+                      aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-				  <br>
+                  <br>
                 </div>
               </div>
             </div>
-			
-			<!-- Project -->
+
+            <!-- Project -->
             <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Project 3</h6>
                   <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
                       <i class="fa fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                      aria-labelledby="dropdownMenuLink">
                       <div class="dropdown-header">Actions:</div>
-                      <a class="dropdown-item" data-toggle="modal" data-target="#createTaskModal"><i class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
-                      <a class="dropdown-item" href="#"><i class="fa fa-pencil fa-sm text-black-50"></i> Rename Project</a>
+                      <a class="dropdown-item" data-toggle="modal" data-target="#createTaskModal"><i
+                          class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil fa-sm text-black-50"></i> Rename
+                        Project</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#"><i class="fa fa-minus fa-sm text-black-50"></i> Delete Project</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-minus fa-sm text-black-50"></i> Delete
+                        Project</a>
                     </div>
                   </div>
                 </div>
                 <div class="card-body">
                   <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20"
+                      aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40"
+                      aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   <h4 class="small font-weight-bold">Customer Database <span class="float-right">60%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="100"></div>
                   </div>
                   <h4 class="small font-weight-bold">Payout Details <span class="float-right">80%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80"
+                      aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
                   <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100"
+                      aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-				  <br>
+                  <br>
                 </div>
               </div>
             </div>
-		  </div>
-		  
-		  <div class="row">
-		  
-          <!-- Project -->
+          </div>
+
+          <div class="row">
+
+            <!-- Project -->
             <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Project 4</h6>
                   <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
                       <i class="fa fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                      aria-labelledby="dropdownMenuLink">
                       <div class="dropdown-header">Actions:</div>
-                      <a class="dropdown-item" data-toggle="modal" data-target="#createTaskModal"><i class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
-                      <a class="dropdown-item" href="#"><i class="fa fa-pencil fa-sm text-black-50"></i> Rename Project</a>
+                      <a class="dropdown-item" data-toggle="modal" data-target="#createTaskModal"><i
+                          class="fa fa-plus fa-sm text-black-50"></i> Add New Task</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil fa-sm text-black-50"></i> Rename
+                        Project</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#"><i class="fa fa-minus fa-sm text-black-50"></i> Delete Project</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-minus fa-sm text-black-50"></i> Delete
+                        Project</a>
                     </div>
                   </div>
                 </div>
                 <div class="card-body">
                   <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20"
+                      aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40"
+                      aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   <h4 class="small font-weight-bold">Customer Database <span class="float-right">60%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="100"></div>
                   </div>
                   <h4 class="small font-weight-bold">Payout Details <span class="float-right">80%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80"
+                      aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
                   <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100"
+                      aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-				  <br>
+                  <br>
                 </div>
               </div>
             </div>
-		  </div>
-		  
-		</div>
+          </div>
+
+        </div>
         <!-- /.container-fluid -->
 
       </div>
@@ -406,7 +429,8 @@
   </a>
 
   <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -424,6 +448,6 @@
     </div>
   </div>
 
-  </body>
+</body>
 
 {{outlet}}
