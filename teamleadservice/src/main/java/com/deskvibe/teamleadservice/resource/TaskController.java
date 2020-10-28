@@ -19,7 +19,7 @@ public class TaskController {
     @PostMapping("/addTask")
     public String saveTask(@RequestBody Task task) {
         repository.save(task);
-        return "Added task with id : " + task.getId();
+        return "Added task with id : " + task.getTaskId();
     }
 
     @GetMapping("/findAllTasks")
@@ -46,7 +46,7 @@ public class TaskController {
     @PutMapping("/updateTask/{id}")
     public String updateTask(@RequestBody Task task) {
         repository.save(task);
-        return "Updated task with id : " + task.getId();
+        return "Updated task with id : " + task.getTaskId();
     }
 
 }

@@ -7,38 +7,40 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Task {
 
     @Id
-    private String id;
+    private String taskId;
     private String taskName;
     private int estimatedTime;
     private int timeTaken;
     private Boolean completionStatus;
-    private Project project;
+    private String projectId;
     private TeamMember teamMember;
 
     private Task() {
-        super();
+
     }
 
-    public Task(String taskName, int estimatedTime, Project project) {
+    public Task(String taskName, int estimatedTime, String projectId) {
+        this();
         this.taskName = taskName;
         this.estimatedTime = estimatedTime;
-        this.project = project;
+        this.projectId = projectId;
+        this.completionStatus = false;
     }
 
-    public Project getProject() {
-        return project;
+    public String getProjectId() {
+        return projectId;
     }
 
-    public void setProject(Project project) {
-        this.project = project;
+    public void setProjectId(String projectId) {
+        this.projectId = projectId;
     }
 
-    public String getId() {
-        return id;
+    public String getTaskId() {
+        return taskId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
     }
 
     public String getTaskName() {
