@@ -235,9 +235,7 @@
                   <h6 class="m-0 font-weight-bold text-primary">Number of Hours Spent</h6>
                 </div>
                 <div class="card-body">
-                  <div class="chart-bar">
-                    <canvas id="myBarChart"></canvas>
-                  </div>
+                  <canvas id="myChart" width="400" height="400"></canvas>
                 </div>
               </div>
             </div>
@@ -252,12 +250,17 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2020</span>
+            <span>Copyright &copy; DeskVibe 2020</span>
           </div>
         </div>
       </footer>
       <!-- End of Footer -->
 
+      <div style="position: fixed; bottom: 5%; padding-left: 90%" class="text-primary">
+        <div>
+          <i class="fa fa-comments fa-3x"></i>
+        </div>
+      </div>
     </div>
     <!-- End of Content Wrapper -->
 
@@ -269,13 +272,46 @@
     <i class="fa fa-angle-up"></i>
   </a>
 
-  <script src="node_modules/startbootstrap-sb-admin-2/vendor/jquery/jquery.min.js"></script>
-  <script src="node_modules/startbootstrap-sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>
 
-  <script src="node_modules/startbootstrap-sb-admin-2/js/sb-admin-2.min.js"></script>
-
-  <script src="node_modules/startbootstrap-sb-admin-2/vendor/chart.js/Chart.min.js"></script>
-  <script src="app/templates/lead-dashboard-a/chart-bar-demo.js"></script>
 
 </body>
 {{outlet}}
