@@ -13,4 +13,5 @@ export default class LeadDashboardAIndexRoute extends Route {
         return data;
 
     }
+ 
 }

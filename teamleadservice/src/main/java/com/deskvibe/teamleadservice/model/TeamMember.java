@@ -1,23 +1,38 @@
 package com.deskvibe.teamleadservice.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@Document(collection="TeamMember")
 public class TeamMember {
 
     @Id
-    public String teamMemberId;
-    public String firstName;
-    public String lastName;
-    public String email;
+    private String teamMemberId;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private List<Task> tasks;
 
     public TeamMember() {
-        super();
+        this.tasks = new ArrayList<>();
     }
 
     public TeamMember(String firstName, String lastName, String email) {
+        this();
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+    }
+
+    public List<Task> getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
     }
 
     public String getTeamMemberId() {
@@ -52,5 +67,5 @@ public class TeamMember {
         this.email = email;
     }
 
-
 }
+
