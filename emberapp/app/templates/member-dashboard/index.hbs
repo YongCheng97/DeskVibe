@@ -106,7 +106,7 @@
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Time Taken for Tasks</h6>
                 </div>
-                <div class="card-body" width="1" height="1">
+                <div class="card-body" >
                   <canvas id="myChart" ></canvas>
                 </div>
 
@@ -301,7 +301,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2020</span>
+             <span>Copyright &copy; DeskVibe 2020</span>
           </div>
         </div>
       </footer>
@@ -350,10 +350,10 @@
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: ['Develop User Story', 'Research project', 'Connect backend to mongo', 'Gather requirement'],
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: '# of hours',
+        data: [12, 19, 3, 5],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
