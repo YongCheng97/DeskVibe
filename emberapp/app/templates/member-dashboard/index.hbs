@@ -9,15 +9,14 @@
   <title>DeskVibe</title>
 
   <!-- Custom fonts for this template-->
-  <link href="node_modules/startbootstrap-sb-admin-2/vendor/fontawesome-free/css/all.min.css"
-    type="text/css">
+  <link href="node_modules/startbootstrap-sb-admin-2/vendor/fontawesome-free/css/all.min.css" type="text/css">
   <link
     href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
 
   <!-- Custom styles for this template-->
   <link href="node_modules/startbootstrap-sb-admin-2/css/sb-admin-2.min.css">
-  
+
   <script src="app/templates/member-dashboard/chart-bar-demo.js"></script>
   <script src="node_modules/chart.js/dist/Chart.js"></script>
 
@@ -58,7 +57,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hi, Valerie Luna</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hi, Alice Tan</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->
@@ -80,9 +79,9 @@
         <div class="container-fluid">
 
           <!-- Content Row -->
-		  <div class="row">
-		  
-          <!-- Task -->
+          <div class="row">
+
+            <!-- Task -->
             <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
@@ -90,27 +89,13 @@
                   <h6 class="m-0 font-weight-bold text-primary">Tasks</h6>
                 </div>
                 <div class="card-body">
-                  <h4 class="small font-weight-bold" data-toggle="modal" data-target="#subtaskModal">Server Migration <span class="float-right">20%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold" data-toggle="modal" data-target="#subtaskModal">Sales Tracking <span class="float-right">40%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold" data-toggle="modal" data-target="#subtaskModal">Customer Database <span class="float-right">60%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold" data-toggle="modal" data-target="#subtaskModal">Payout Details <span class="float-right">80%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold" data-toggle="modal" data-target="#subtaskModal">Account Setup <span class="float-right">Complete!</span></h4>
-                  <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-				  <br>
+
+                  {{#each this.model as |members|}}
+                  <Members @members={{members}} />
+                  {{/each}}
+
+
+                  <br>
                 </div>
               </div>
             </div>
@@ -121,18 +106,16 @@
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Time Taken for Tasks</h6>
                 </div>
-                <div class="card-body">
-                  <div class="chart-bar">
-                    <canvas id="myBarChart"></canvas>
-                  </div>
+                <div class="card-body" >
+                  <canvas id="myChart" ></canvas>
                 </div>
+
               </div>
             </div>
           </div>
-		  
-		  <!-- Subtask Modal -->
-          <div class="modal fade" id="subtaskModal" tabindex="-1" role="dialog"
-            aria-hidden="true">
+
+          <!-- Subtask Modal -->
+          <div class="modal fade" id="subtaskModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -145,33 +128,34 @@
                   <div class="modal-body">
                     <div class="form-group">
                       <input type="checkbox" id="1" name="1" value="true">
-					  <label for="1">Subtask 1</label><br>
+                      <label for="1">Subtask 1</label><br>
                     </div>
-					<div class="form-group">
+                    <div class="form-group">
                       <input type="checkbox" id="2" name="2" value="true">
-					  <label for="2">Subtask 2</label><br>
+                      <label for="2">Subtask 2</label><br>
                     </div>
-					<div class="form-group">
+                    <div class="form-group">
                       <input type="checkbox" id="3" name="3" value="true">
-					  <label for="3">Subtask 3</label><br>
+                      <label for="3">Subtask 3</label><br>
                     </div>
-					<div class="form-group">
+                    <div class="form-group">
                       <input type="checkbox" id="4" name="4" value="true">
-					  <label for="4">Subtask 4</label><br>
+                      <label for="4">Subtask 4</label><br>
                     </div>
                     <div class="modal-footer justify-content-center">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                      <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#createSubtaskModal"><i class="fa fa-plus fa-sm text-white-50"></i>Add New Subtask</button>
+                      <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+                        data-target="#createSubtaskModal"><i class="fa fa-plus fa-sm text-white-50"></i>Add New
+                        Subtask</button>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
           </div>
-		  
-		  <!-- Create Subtask Modal -->
-          <div class="modal fade" id="createSubtaskModal" tabindex="-1" role="dialog"
-            aria-hidden="true">
+
+          <!-- Create Subtask Modal -->
+          <div class="modal fade" id="createSubtaskModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -195,8 +179,8 @@
               </div>
             </div>
           </div>
-		  
-		  
+
+
           <!-- Content Row -->
           <div class="row">
 
@@ -206,33 +190,34 @@
               <!-- Surveys -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-					<div class="row">
-						<div class="col-sm">
-							<h6 class="m-0 font-weight-bold text-primary">Surveys</h6>
-						</div>
-						<div class="col-sm">
-							<span class="badge badge-primary badge-pill" style="float:right">1</span>
-						</div>
-					</div>
+                  <div class="row">
+                    <div class="col-sm">
+                      <h6 class="m-0 font-weight-bold text-primary">Surveys</h6>
+                    </div>
+                    <div class="col-sm">
+                      <span class="badge badge-primary badge-pill" style="float:right">1</span>
+                    </div>
+                  </div>
                 </div>
-				<div class="card-body">
-					<div class="card w-120">
-					  <div class="card-body">
-						<div class="row">
-							<div class="col-sm">
-								<h5 class="card-title">Work-Life Balance</h5>
-								<p class="card-text">Let me know your thoughts!</p>
-								<p class="card-text">Survey Due: 12 November 2020</p>
-							</div>
-							<div class="col-sm">
-								<span style="float: right" data-toggle="modal" data-target="#surveyModal" class="btn btn-primary">Start Survey</span>
-							</div>
-						</div>
-					  </div>
-					</div>
-					<br><br>
+                <div class="card-body">
+                  <div class="card w-120">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-sm">
+                          <h5 class="card-title">Work-Life Balance</h5>
+                          <p class="card-text">Let me know your thoughts!</p>
+                          <p class="card-text">Survey Due: 12 November 2020</p>
+                        </div>
+                        <div class="col-sm">
+                          <span style="float: right" data-toggle="modal" data-target="#surveyModal"
+                            class="btn btn-primary">Start Survey</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br><br>
                 </div>
-				
+
               </div>
 
             </div>
@@ -245,23 +230,22 @@
                   <h6 class="m-0 font-weight-bold text-primary">Feedback</h6>
                 </div>
                 <div class="card-body">
-					<form>
-					  <textarea id="feedback" name="feedback" style="resize: none;height:100px; width:100%">
+                  <form>
+                    <textarea id="feedback" name="feedback" style="resize: none;height:100px; width:100%">
 					  </textarea>
-					  <br>
-					  <input type="checkbox" id="anonymous" name="anonymous" value="true">
-					  <label for="anonymous">I would like to feedback anonymously</label><br>
-					  <button type="button" class="btn btn-primary">Submit</button>
-					</form>
+                    <br>
+                    <input type="checkbox" id="anonymous" name="anonymous" value="true">
+                    <label for="anonymous">I would like to feedback anonymously</label><br>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                  </form>
                 </div>
               </div>
-			  
+
             </div>
           </div>
-		  
-		  <!-- Survey Modal -->
-          <div class="modal fade" id="surveyModal" tabindex="-1" role="dialog"
-            aria-hidden="true">
+
+          <!-- Survey Modal -->
+          <div class="modal fade" id="surveyModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -272,28 +256,28 @@
                 </div>
                 <form>
                   <div class="modal-body">
-					<div class="row">
-						<div class="col-sm">
-							<p class="card-text">Survey Created By: Zoey</p>
-						</div>
-						<div class="col-sm">
-							<p class="card-text">Survey Created On: 5/11/2020</p>
-						</div>
-					</div>
-					<br>
+                    <div class="row">
+                      <div class="col-sm">
+                        <p class="card-text">Survey Created By: Zoey</p>
+                      </div>
+                      <div class="col-sm">
+                        <p class="card-text">Survey Created On: 5/11/2020</p>
+                      </div>
+                    </div>
+                    <br>
                     <div class="form-group">
                       <label for="q1">1. How do you feel about your workload these days? </label>
                       <input type="text" class="form-control" id="q1">
                     </div>
-					<div class="form-group">
+                    <div class="form-group">
                       <label for="q2">2. Do you think you have sufficient rest? </label>
                       <input type="text" class="form-control" id="q2">
                     </div>
-					<div class="form-group">
+                    <div class="form-group">
                       <label for="q3">3. Are you able to differentiate work and rest? </label>
                       <input type="text" class="form-control" id="q3">
                     </div>
-					<div class="form-group">
+                    <div class="form-group">
                       <label for="q4">4. Do you find yourself working past working hours? </label>
                       <input type="text" class="form-control" id="q4">
                     </div>
@@ -317,12 +301,17 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2020</span>
+             <span>Copyright &copy; DeskVibe 2020</span>
           </div>
         </div>
       </footer>
       <!-- End of Footer -->
 
+      <div style="position: fixed; bottom: 5%; padding-left: 90%" class="text-primary">
+        <div>
+          <i class="fa fa-comments fa-3x"></i>
+        </div>
+      </div>
     </div>
     <!-- End of Content Wrapper -->
 
@@ -335,7 +324,8 @@
   </a>
 
   <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -347,12 +337,52 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="/">Logout</a>
         </div>
       </div>
     </div>
   </div>
-  
-  </body>
+
+</body>
+
+<script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Develop User Story', 'Research project', 'Connect backend to mongo', 'Gather requirement'],
+      datasets: [{
+        label: '# of hours',
+        data: [12, 19, 3, 5],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+</script>
 
 {{outlet}}

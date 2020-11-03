@@ -38,7 +38,7 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <!-- Topbar Search -->
+          <!-- Header -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group text-primary">
               <h2> DeskVibe </h2>
@@ -48,7 +48,7 @@
           <div class="btn-group" role="group" aria-label="Dashboard buttons">
             <a class="btn btn-sm btn-primary active" type="button" href="/lead-dashboardA">Dashboard</a>
             <a class="btn btn-sm btn-primary" type="button" href="/lead-dashboardB">Projects</a>
-            <a class="btn btn-sm btn-primary" type="button" href="/lead-dashboardC">Feedback and Surveys</a>
+            <a class="btn btn-sm btn-primary " type="button" href="/lead-dashboardC">Feedback and Surveys</a>
           </div>
 
           <!-- Topbar Navbar -->
@@ -234,11 +234,8 @@
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Number of Hours Spent</h6>
                 </div>
-                <div class="card-body">
-                  {{!-- <div class="chart-bar">
-                    <canvas id="myBarChart"></canvas>
-                  </div> --}}
-                  <canvas id="myChart" width="400" height="400"></canvas>
+                <div class="card-body" width="400" height="400">
+                  <canvas id="myChart" ></canvas>
                 </div>
               </div>
             </div>
@@ -253,12 +250,17 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2020</span>
+            <span>Copyright &copy; DeskVibe 2020</span>
           </div>
         </div>
       </footer>
       <!-- End of Footer -->
 
+      <div style="position: fixed; bottom: 5%; padding-left: 90%" class="text-primary">
+        <div>
+          <i class="fa fa-comments fa-3x"></i>
+        </div>
+      </div>
     </div>
     <!-- End of Content Wrapper -->
 
@@ -270,23 +272,37 @@
     <i class="fa fa-angle-up"></i>
   </a>
 
-  {{!-- <script src="../../../../node_modules/startbootstrap-sb-admin-2/vendor/jquery/jquery.min.js"></script>
-  <script src="../../../../node_modules/startbootstrap-sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <script src="../../../../node_modules/startbootstrap-sb-admin-2/js/sb-admin-2.min.js"></script>
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="/">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <script src="../../../../node_modules/startbootstrap-sb-admin-2/vendor/chart.js/Chart.min.js"></script>
-  <script src="../../../app/templates/lead-dashboard-a/chart-bar-demo.js"></script> --}}
 
   <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Alice Tan', 'Bob Lim', 'Peter Loh', 'Lim Ah Pin', 'May Ew', 'John Oh'],
         datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
+          label: '# of Hours ',
+          data: [17, 8, 9, 7, 8, 2],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
@@ -317,6 +333,7 @@
       }
     });
   </script>
+
 
 </body>
 {{outlet}}
