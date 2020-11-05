@@ -1,0 +1,21 @@
+IS4301 DeskVibe 
+
+Crystal Lee
+A0189643N
+
+Foo Yong Cheng
+A0190133R
+
+Jil Ong
+A0188522Y
+
+Zeng Daize 
+A0182686N
+
+Backend: Spring Boot
+Frontend: EmberJS
+Database: Mongodb Cloud Atlas
+cluster0-shard-00-00.lxuhx.mongodb.net:27017
+
+username: admin
+password: PASSWORD
